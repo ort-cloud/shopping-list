@@ -16,5 +16,18 @@ function addItemHandler() {
     </li>`);
     $('#shopping-list-entry').val('')
   });
+  return true;
 };
 
+function checkButtonHandler(){
+  $('.shopping-item-toggle').click(function(event){
+    $(this).closest('li').find('.shopping-item').toggleClass('shopping-item__checked');
+  });
+};
+
+function shoppingList(){
+  addItemHandler();
+  checkButtonHandler();
+};
+
+$(shoppingList());
