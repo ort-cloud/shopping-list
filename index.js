@@ -25,9 +25,16 @@ function checkButtonHandler(){
   });
 };
 
+function deleteItemsHandler(){
+  $('.shopping-item-delete').click(function(event){
+    $(this).closest('li').remove();
+  })
+}
+
 function shoppingList(){
   addItemHandler();
   checkButtonHandler();
+  deleteItemsHandler();
 };
 
 $(shoppingList());
